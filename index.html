@@ -7,84 +7,93 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    
 </head>
 <body>
     <!-- Header/Navigation -->
-    <header class="bg-white shadow-sm">
+    <header class="bg-opacity-5 bg-white backdrop-filter backdrop-blur-lg fixed w-full z-50 shadow-sm">
         <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
             <div class="flex items-center">
-                <img src="assets/logo.svg" alt="LLMXperts Logo" class="h-20">
+                <img src="assets/logo.svg" alt="LLMXperts Logo" class="h-14">
             </div>
             <div class="hidden md:flex space-x-8">
-                <a href="#home" class="text-gray-700 hover:text-indigo-600">Home</a>
-                <a href="#services" class="text-gray-700 hover:text-indigo-600">Services</a>
-                <a href="#about" class="text-gray-700 hover:text-indigo-600">About Us</a>
-                <a href="#contact" class="text-gray-700 hover:text-indigo-600">Contact</a>
+                <a href="#home" class="text-white hover:text-accent-color transition-colors">Home</a>
+                <a href="#services" class="text-white hover:text-accent-color transition-colors">Services</a>
+                <a href="#about" class="text-white hover:text-accent-color transition-colors">About Us</a>
+                <a href="#contact" class="text-white hover:text-accent-color transition-colors">Contact</a>
             </div>
             <div class="md:hidden">
-                <button id="mobile-menu-button" class="text-gray-700">
+                <button id="mobile-menu-button" class="text-white">
                     <i class="fas fa-bars text-xl"></i>
                 </button>
             </div>
         </nav>
-        <div id="mobile-menu" class="hidden md:hidden px-4 py-2 bg-white shadow-md">
-            <a href="#home" class="block py-2 text-gray-700 hover:text-indigo-600">Home</a>
-            <a href="#services" class="block py-2 text-gray-700 hover:text-indigo-600">Services</a>
-            <a href="#about" class="block py-2 text-gray-700 hover:text-indigo-600">About Us</a>
-            <a href="#contact" class="block py-2 text-gray-700 hover:text-indigo-600">Contact</a>
+        <div id="mobile-menu" class="hidden md:hidden px-4 py-2 bg-dark-bg bg-opacity-90 backdrop-filter backdrop-blur-lg">
+            <a href="#home" class="block py-2 text-white hover:text-accent-color">Home</a>
+            <a href="#services" class="block py-2 text-white hover:text-accent-color">Services</a>
+            <a href="#about" class="block py-2 text-white hover:text-accent-color">About Us</a>
+            <a href="#contact" class="block py-2 text-white hover:text-accent-color">Contact</a>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="hero-section text-white">
-        <div class="container mx-auto px-4 py-16">
+    <section id="home" class="hero-section">
+        <div class="neural-bg" id="neuralNetworkBackground"></div>
+        <div class="container mx-auto px-4 py-24 content-wrapper">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div>
-                    <h1 class="text-4xl md:text-5xl font-bold mb-4">Custom AI Chatbots for Your Business</h1>
-                    <p class="text-xl mb-8">We create intelligent, domain-specific AI chatbots tailored to your company's needs using the latest LLM technologies.</p>
+                    <h1 class="text-5xl md:text-6xl font-bold mb-6 text-white">
+                        Custom <span class="gradient-text">AI Chatbots</span> for Your Business
+                    </h1>
+                    <p class="text-xl mb-8 text-gray-300">We create intelligent, domain-specific AI chatbots tailored to your company's needs using the latest LLM technologies.</p>
                     <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                        <a href="#services" class="btn-primary text-white font-semibold px-6 py-3 rounded-lg text-center">Our Services</a>
-                        <a href="#contact" class="bg-white text-indigo-600 font-semibold px-6 py-3 rounded-lg text-center">Contact Us</a>
+                        <a href="#services" class="btn-primary text-white font-semibold px-8 py-4 rounded-lg text-center">Our Services</a>
+                        <a href="#contact" class="bg-transparent text-white font-semibold px-8 py-4 rounded-lg text-center border border-white hover:border-accent-color hover:text-accent-color transition-colors">Contact Us</a>
                     </div>
                 </div>
-                <div class="flex justify-center">
-                    <img src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400&q=80" alt="AI Chatbot Illustration" class="rounded-lg shadow-xl">
+                <div class="flex justify-center relative">
+                    <div class="absolute w-64 h-64 bg-primary-color rounded-full filter blur-3xl opacity-10 -z-10"></div>
+                    <img src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400&q=80" alt="AI Chatbot Illustration" class="rounded-xl shadow-2xl z-10 glass-card p-1">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="section bg-white">
-        <div class="container mx-auto px-4">
+    <section id="services" class="section section-dark">
+        <div class="blur-bg blur-primary absolute top-20 left-20"></div>
+        <div class="blur-bg blur-accent absolute bottom-20 right-20"></div>
+        <div class="container mx-auto px-4 relative z-10">
             <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold mb-4">Our Services</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">We leverage cutting-edge technologies to create custom AI solutions for your business needs.</p>
+                <h2 class="text-4xl font-bold mb-6">
+                    Our <span class="gradient-text">Services</span>
+                </h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">We leverage cutting-edge technologies to create custom AI solutions for your business needs.</p>
             </div>
             
             <div class="grid md:grid-cols-3 gap-8">
                 <!-- Service 1 -->
-                <div class="card bg-white p-6 rounded-xl shadow-md">
+                <div class="glass-card p-8">
                     <div class="feature-icon text-white">
                         <i class="fas fa-robot"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">Custom AI Chatbots</h3>
-                    <p class="text-gray-600 mb-4">We build company-specific AI chatbots tailored to your domain knowledge and customer needs.</p>
-                    <ul class="text-gray-600 space-y-2">
+                    <h3 class="text-2xl font-bold mb-4 text-white">Custom AI Chatbots</h3>
+                    <p class="text-gray-300 mb-6">We build company-specific AI chatbots tailored to your domain knowledge and customer needs.</p>
+                    <ul class="text-gray-300 space-y-3">
                         <li class="flex items-start">
-                            <svg class="h-5 w-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="h-5 w-5 text-accent-color mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
                             Domain-specific knowledge
                         </li>
                         <li class="flex items-start">
-                            <svg class="h-5 w-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="h-5 w-5 text-accent-color mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
                             Personalized responses
                         </li>
                         <li class="flex items-start">
-                            <svg class="h-5 w-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="h-5 w-5 text-accent-color mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
                             24/7 customer support
@@ -93,27 +102,27 @@
                 </div>
                 
                 <!-- Service 2 -->
-                <div class="card bg-white p-6 rounded-xl shadow-md">
+                <div class="glass-card p-8">
                     <div class="feature-icon text-white">
                         <i class="fas fa-database"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">RAG Implementation</h3>
-                    <p class="text-gray-600 mb-4">We implement Retrieval Augmented Generation to ground AI responses in your company's data.</p>
-                    <ul class="text-gray-600 space-y-2">
+                    <h3 class="text-2xl font-bold mb-4 text-white">RAG Implementation</h3>
+                    <p class="text-gray-300 mb-6">We implement Retrieval Augmented Generation to ground AI responses in your company's data.</p>
+                    <ul class="text-gray-300 space-y-3">
                         <li class="flex items-start">
-                            <svg class="h-5 w-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="h-5 w-5 text-accent-color mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
                             Data integration
                         </li>
                         <li class="flex items-start">
-                            <svg class="h-5 w-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="h-5 w-5 text-accent-color mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
                             Accurate responses
                         </li>
                         <li class="flex items-start">
-                            <svg class="h-5 w-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="h-5 w-5 text-accent-color mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
                             Reduced hallucinations
@@ -122,27 +131,27 @@
                 </div>
                 
                 <!-- Service 3 -->
-                <div class="card bg-white p-6 rounded-xl shadow-md">
+                <div class="glass-card p-8">
                     <div class="feature-icon text-white">
                         <i class="fas fa-code"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">Model Fine-Tuning</h3>
-                    <p class="text-gray-600 mb-4">We fine-tune LLMs on your specific data to improve performance for your use cases.</p>
-                    <ul class="text-gray-600 space-y-2">
+                    <h3 class="text-2xl font-bold mb-4 text-white">Model Fine-Tuning</h3>
+                    <p class="text-gray-300 mb-6">We fine-tune LLMs on your specific data to improve performance for your use cases.</p>
+                    <ul class="text-gray-300 space-y-3">
                         <li class="flex items-start">
-                            <svg class="h-5 w-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="h-5 w-5 text-accent-color mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
                             Custom training
                         </li>
                         <li class="flex items-start">
-                            <svg class="h-5 w-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="h-5 w-5 text-accent-color mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
                             Enhanced performance
                         </li>
                         <li class="flex items-start">
-                            <svg class="h-5 w-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="h-5 w-5 text-accent-color mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
                             Domain adaptation
@@ -151,29 +160,29 @@
                 </div>
             </div>
             
-            <div class="grid md:grid-cols-2 gap-8 mt-8">
+            <div class="grid md:grid-cols-2 gap-8 mt-12">
                 <!-- Service 4 -->
-                <div class="card bg-white p-6 rounded-xl shadow-md">
+                <div class="glass-card p-8">
                     <div class="feature-icon text-white">
                         <i class="fas fa-cogs"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">Prompt Engineering</h3>
-                    <p class="text-gray-600 mb-4">We optimize prompts to get the best results from LLMs for your specific use cases.</p>
-                    <ul class="text-gray-600 space-y-2">
+                    <h3 class="text-2xl font-bold mb-4 text-white">Prompt Engineering</h3>
+                    <p class="text-gray-300 mb-6">We optimize prompts to get the best results from LLMs for your specific use cases.</p>
+                    <ul class="text-gray-300 space-y-3">
                         <li class="flex items-start">
-                            <svg class="h-5 w-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="h-5 w-5 text-accent-color mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
                             Custom prompt design
                         </li>
                         <li class="flex items-start">
-                            <svg class="h-5 w-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="h-5 w-5 text-accent-color mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
                             Output optimization
                         </li>
                         <li class="flex items-start">
-                            <svg class="h-5 w-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="h-5 w-5 text-accent-color mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
                             Response consistency
@@ -182,27 +191,27 @@
                 </div>
                 
                 <!-- Service 5 -->
-                <div class="card bg-white p-6 rounded-xl shadow-md">
+                <div class="glass-card p-8">
                     <div class="feature-icon text-white">
                         <i class="fas fa-server"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">Infrastructure Setup</h3>
-                    <p class="text-gray-600 mb-4">We set up and optimize your AI infrastructure on GCP, AWS, or other platforms.</p>
-                    <ul class="text-gray-600 space-y-2">
+                    <h3 class="text-2xl font-bold mb-4 text-white">Infrastructure Setup</h3>
+                    <p class="text-gray-300 mb-6">We set up and optimize your AI infrastructure on GCP, AWS, or other platforms.</p>
+                    <ul class="text-gray-300 space-y-3">
                         <li class="flex items-start">
-                            <svg class="h-5 w-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="h-5 w-5 text-accent-color mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
                             Cloud deployment
                         </li>
                         <li class="flex items-start">
-                            <svg class="h-5 w-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="h-5 w-5 text-accent-color mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
                             Scaling solutions
                         </li>
                         <li class="flex items-start">
-                            <svg class="h-5 w-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="h-5 w-5 text-accent-color mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
                             Cost optimization
@@ -214,164 +223,164 @@
     </section>
 
     <!-- Technologies Section -->
-    <section class="section bg-gray-50">
+    <section class="section section-light">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold mb-4">Technologies We Use</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">We leverage the latest AI and cloud technologies to build powerful, scalable solutions.</p>
+                <h2 class="text-4xl font-bold mb-6">
+                    <span class="gradient-text">Technologies</span> We Use
+                </h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">We leverage the latest AI and cloud technologies to build powerful, scalable solutions.</p>
             </div>
             
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center">
-                <div class="tech-logo p-4">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4d/OpenAI_Logo.svg" alt="OpenAI Logo" class="h-12">
-                    <p class="text-center mt-2 font-medium">OpenAI</p>
+                <div class="tech-logo p-4 glass-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4d/OpenAI_Logo.svg" alt="OpenAI Logo" class="h-12 mx-auto">
+                    <p class="text-center mt-2 font-medium text-white">OpenAI</p>
                 </div>
-                <div class="tech-logo p-4">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python Logo" class="h-12">
-                    <p class="text-center mt-2 font-medium">Python</p>
+                <div class="tech-logo p-4 glass-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python Logo" class="h-12 mx-auto">
+                    <p class="text-center mt-2 font-medium text-white">Python</p>
                 </div>
-                <div class="tech-logo p-4">
-                    <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="HuggingFace Logo" class="h-12">
-                    <p class="text-center mt-2 font-medium">HuggingFace</p>
+                <div class="tech-logo p-4 glass-card">
+                    <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="HuggingFace Logo" class="h-12 mx-auto">
+                    <p class="text-center mt-2 font-medium text-white">HuggingFace</p>
                 </div>
-                <div class="tech-logo p-4">
-                    <img src="https://cloud.google.com/_static/cloud/images/social-icon-google-cloud-1200-630.png" alt="GCP Logo" class="h-12">
-                    <p class="text-center mt-2 font-medium">GCP</p>
+                <div class="tech-logo p-4 glass-card">
+                    <img src="https://cloud.google.com/_static/cloud/images/social-icon-google-cloud-1200-630.png" alt="GCP Logo" class="h-12 mx-auto">
+                    <p class="text-center mt-2 font-medium text-white">GCP</p>
                 </div>
-                <div class="tech-logo p-4">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="AWS Logo" class="h-12">
-                    <p class="text-center mt-2 font-medium">AWS</p>
+                <div class="tech-logo p-4 glass-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="AWS Logo" class="h-12 mx-auto">
+                    <p class="text-center mt-2 font-medium text-white">AWS</p>
                 </div>
-                <div class="tech-logo p-4">
-                    <img src="https://pinecone.io/images/pinecone-logo.svg" alt="Pinecone Logo" class="h-12">
-                    <p class="text-center mt-2 font-medium">Pinecone</p>
+                <div class="tech-logo p-4 glass-card">
+                    <img src="https://pinecone.io/images/pinecone-logo.svg" alt="Pinecone Logo" class="h-12 mx-auto">
+                    <p class="text-center mt-2 font-medium text-white">Pinecone</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="section bg-white">
-        <div class="container mx-auto px-4">
+    <section id="about" class="section section-dark">
+        <div class="blur-bg blur-secondary absolute top-40 right-20"></div>
+        <div class="container mx-auto px-4 relative z-10">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div>
-                    <h2 class="text-3xl font-bold mb-6">About LLMXperts</h2>
-                    <p class="text-lg text-gray-600 mb-6">LLMXperts is a leading provider of end-to-end LLM solutions, specializing in creating company-specific AI chatbots. Based in Surat, India, our team of experts has successfully served over 1000 customers in the finance domain.</p>
-                    <p class="text-lg text-gray-600 mb-6">Founded by Rasila Zalavadiya, we work in partnership with creditready.com, trutopia.com, and kinexa.agency to deliver comprehensive AI solutions that transform businesses.</p>
+                    <h2 class="text-4xl font-bold mb-6 text-white">
+                        About <span class="gradient-text">LLMXperts</span>
+                    </h2>
+                    <p class="text-lg text-gray-300 mb-6">LLMXperts is a leading provider of end-to-end LLM solutions, specializing in creating company-specific AI chatbots. Based in Surat, India, our team of experts has successfully served over 1000 customers in the finance domain.</p>
+                    <p class="text-lg text-gray-300 mb-8">Founded by Rasila Zalavadiya, we work in partnership with creditready.com, trutopia.com, and kinexa.agency to deliver comprehensive AI solutions that transform businesses.</p>
                     
-                    <h3 class="text-2xl font-bold mb-4">Our Mission</h3>
-                    <p class="text-lg text-gray-600 mb-6">To democratize access to advanced AI technologies by providing customized, reliable, and efficient LLM solutions that empower businesses to enhance customer experiences and streamline operations.</p>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Our Mission</h3>
+                    <p class="text-lg text-gray-300 mb-8">To democratize access to advanced AI technologies by providing customized, reliable, and efficient LLM solutions that empower businesses to enhance customer experiences and streamline operations.</p>
                     
-                    <h3 class="text-2xl font-bold mb-4">Our Goals</h3>
-                    <ul class="text-lg text-gray-600 space-y-2">
+                    <h3 class="text-2xl font-bold mb-4 text-white">Our Goals</h3>
+                    <ul class="text-lg text-gray-300 space-y-4">
                         <li class="flex items-start">
-                            <svg class="h-6 w-6 text-indigo-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            Deliver innovative AI solutions that solve real business problems
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="h-6 w-6 text-indigo-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="h-6 w-6 text-accent-color mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
                             Ensure high accuracy and reliability in all our AI implementations
                         </li>
                         <li class="flex items-start">
-                            <svg class="h-6 w-6 text-indigo-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="h-6 w-6 text-accent-color mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
                             Stay at the forefront of LLM technology advances
                         </li>
                     </ul>
                 </div>
-                <div class="flex justify-center">
-                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&h=600&q=80" alt="Team Working" class="rounded-lg shadow-xl">
+                <div class="flex justify-center relative">
+                    <div class="absolute w-64 h-64 bg-accent-color rounded-full filter blur-3xl opacity-10 -z-10"></div>
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&h=600&q=80" alt="Team Working" class="rounded-xl shadow-2xl z-10 glass-card p-1">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Partners Section -->
-    <section class="section bg-gray-50">
+    <section class="section section-light">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold mb-4">Our Partners</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">We collaborate with these amazing companies to deliver comprehensive AI solutions.</p>
+                <h2 class="text-4xl font-bold mb-6 text-white">
+                    Our <span class="gradient-text">Partners</span>
+                </h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">We collaborate with these amazing companies to deliver comprehensive AI solutions.</p>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center justify-items-center">
-                <a href="https://creditready.com" target="_blank" class="partner-logo p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 items-center justify-items-center">
+                <a href="https://creditready.com" target="_blank" class="partner-logo glass-card p-8 w-full max-w-xs" style="background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8));">
                     <img src="assets/creditreadylogo.svg" alt="CreditReady Logo" class="h-16 mx-auto">
-                    <p class="text-center mt-4 font-medium text-lg">creditready.com</p>
+                    <p class="text-center mt-6 font-medium text-lg text-black">creditready.com</p>
                 </a>
-                <a href="https://trutopia.com" target="_blank" class="partner-logo p-6 bg-purple-500 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <a href="https://trutopia.com" target="_blank" class="partner-logo glass-card p-8 w-full max-w-xs" style="background: linear-gradient(135deg, rgba(147, 51, 234, 0.2), rgba(168, 85, 247, 0.1));">
                     <img src="assets/trutopialogo.svg" alt="Trutopia Logo" class="h-16 mx-auto">
-                    <p class="text-center mt-4 font-medium text-lg text-white">trutopia.com</p>
+                    <p class="text-center mt-6 font-medium text-lg text-white">trutopia.com</p>
                 </a>
-                <a href="https://www.kinexa.agency" target="_blank" class="partner-logo p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <a href="https://www.kinexa.agency" target="_blank" class="partner-logo glass-card p-8 w-full max-w-xs" style="background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8));">
                     <img src="assets/kinexa2.svg" alt="Kinexa Agency Logo" class="h-16 mx-auto">
-                    <p class="text-center mt-4 font-medium text-lg">kinexa.agency</p>
+                    <p class="text-center mt-6 font-medium text-lg text-black">kinexa.agency</p>
                 </a>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="section bg-white">
-        <div class="container mx-auto px-4">
+    <section id="contact" class="section section-dark">
+        <div class="blur-bg blur-primary absolute bottom-20 left-40"></div>
+        <div class="blur-bg blur-accent absolute top-40 right-40"></div>
+        <div class="container mx-auto px-4 relative z-10">
             <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold mb-4">Contact Us</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Reach out to discuss how we can help with your AI chatbot needs.</p>
+                <h2 class="text-4xl font-bold mb-6 text-white">
+                    <span class="gradient-text">Contact</span> Us
+                </h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">Reach out to discuss how we can help with your AI chatbot needs.</p>
             </div>
             
             <div class="grid md:grid-cols-2 gap-12">
                 <div>
-                    <h3 class="text-2xl font-bold mb-6">Get In Touch</h3>
-                    <div class="space-y-4">
-                        <div class="flex items-start">
-                            <div class="text-indigo-600 mr-4">
-                                <i class="fas fa-map-marker-alt text-2xl"></i>
+                    <h3 class="text-2xl font-bold mb-8 text-white">Get In Touch</h3>
+                    <div class="space-y-6">
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon">
+                                <i class="fas fa-map-marker-alt text-white"></i>
                             </div>
-                            <div>
-                                <h4 class="font-semibold text-lg">Address</h4>
-                                <p class="text-gray-600">Surat, Gujarat, India</p>
-                            </div>
+                            <h4 class="font-semibold text-xl text-white mb-2">Address</h4>
+                            <p class="text-gray-300">Surat, Gujarat, India</p>
                         </div>
                         
-                        <div class="flex items-start">
-                            <div class="text-indigo-600 mr-4">
-                                <i class="fas fa-phone text-2xl"></i>
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon">
+                                <i class="fas fa-phone text-white"></i>
                             </div>
-                            <div>
-                                <h4 class="font-semibold text-lg">Phone</h4>
-                                <p class="text-gray-600">+91 8460108506</p>
-                            </div>
+                            <h4 class="font-semibold text-xl text-white mb-2">Phone</h4>
+                            <p class="text-gray-300">+91 8460108506</p>
                         </div>
                         
-                        <div class="flex items-start">
-                            <div class="text-indigo-600 mr-4">
-                                <i class="fas fa-envelope text-2xl"></i>
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon">
+                                <i class="fas fa-envelope text-white"></i>
                             </div>
-                            <div>
-                                <h4 class="font-semibold text-lg">Email</h4>
-                                <p class="text-gray-600">llmgotxperts@gmail.com</p>
-                            </div>
+                            <h4 class="font-semibold text-xl text-white mb-2">Email</h4>
+                            <p class="text-gray-300">llmgotxperts@gmail.com</p>
                         </div>
                     </div>
                     
-                    <div class="mt-8">
-                        <h3 class="text-2xl font-bold mb-6">Follow Us</h3>
+                    <div class="mt-12">
+                        <h3 class="text-2xl font-bold mb-6 text-white">Follow Us</h3>
                         <div class="flex space-x-4">
-                            <a href="#" class="bg-indigo-600 text-white p-3 rounded-full hover:bg-indigo-700 transition-colors">
+                            <a href="#" class="social-icon text-white hover:text-white">
                                 <i class="fab fa-linkedin-in"></i>
                             </a>
-                            <a href="#" class="bg-indigo-600 text-white p-3 rounded-full hover:bg-indigo-700 transition-colors">
+                            <a href="#" class="social-icon text-white hover:text-white">
                                 <i class="fab fa-twitter"></i>
                             </a>
-                            <a href="#" class="bg-indigo-600 text-white p-3 rounded-full hover:bg-indigo-700 transition-colors">
+                            <a href="#" class="social-icon text-white hover:text-white">
                                 <i class="fab fa-facebook-f"></i>
                             </a>
-                            <a href="#" class="bg-indigo-600 text-white p-3 rounded-full hover:bg-indigo-700 transition-colors">
+                            <a href="#" class="social-icon text-white hover:text-white">
                                 <i class="fab fa-instagram"></i>
                             </a>
                         </div>
@@ -379,29 +388,29 @@
                 </div>
                 
                 <div>
-                    <form id="contact-form" class="bg-gray-50 p-8 rounded-lg shadow-md">
-                        <h3 class="text-2xl font-bold mb-6">Send Us a Message</h3>
+                    <form id="contact-form" class="glass-card p-8 contact-form">
+                        <h3 class="text-2xl font-bold mb-6 text-white">Send Us a Message</h3>
                         <div class="mb-4">
-                            <label for="name" class="block text-gray-700 font-medium mb-2">Name</label>
+                            <label for="name" class="block text-white font-medium mb-2">Name</label>
                             <input type="text" id="name" placeholder="Your Name" required>
                         </div>
                         
                         <div class="mb-4">
-                            <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+                            <label for="email" class="block text-white font-medium mb-2">Email</label>
                             <input type="email" id="email" placeholder="Your Email" required>
                         </div>
                         
                         <div class="mb-4">
-                            <label for="subject" class="block text-gray-700 font-medium mb-2">Subject</label>
+                            <label for="subject" class="block text-white font-medium mb-2">Subject</label>
                             <input type="text" id="subject" placeholder="Subject">
                         </div>
                         
                         <div class="mb-6">
-                            <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+                            <label for="message" class="block text-white font-medium mb-2">Message</label>
                             <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
                         </div>
                         
-                        <button type="submit" class="btn-primary text-white font-semibold px-6 py-3 rounded-lg w-full">
+                        <button type="submit" class="btn-primary text-white font-semibold px-6 py-4 rounded-lg w-full">
                             Send Message
                         </button>
                     </form>
@@ -411,40 +420,51 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
+    <footer class="bg-dark-bg bg-opacity-80 text-white py-16">
         <div class="container mx-auto px-4">
-            <div class="grid md:grid-cols-4 gap-8">
+            <div class="grid md:grid-cols-4 gap-10">
                 <div>
-                    <h3 class="text-2xl font-bold mb-4">LLMXperts</h3>
+                    <div class="mb-6">
+                        <img src="assets/logo.svg" alt="LLMXperts Logo" class="h-30">
+                    </div>
                     <p class="text-gray-400 mb-4">End-to-end LLM solutions for your business needs. We specialize in creating company-specific AI chatbots.</p>
                 </div>
                 
                 <div>
-                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#home" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
-                        <li><a href="#services" class="text-gray-400 hover:text-white transition-colors">Services</a></li>
-                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
-                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                    <h4 class="text-xl font-semibold mb-6 text-white">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-gray-400 hover:text-accent-color transition-colors block">Home</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-accent-color transition-colors block">Services</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-accent-color transition-colors block">About Us</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-accent-color transition-colors block">Contact</a></li>
                     </ul>
                 </div>
                 
                 <div>
-                    <h4 class="text-lg font-semibold mb-4">Services</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#services" class="text-gray-400 hover:text-white transition-colors">Custom AI Chatbots</a></li>
-                        <li><a href="#services" class="text-gray-400 hover:text-white transition-colors">RAG Implementation</a></li>
-                        <li><a href="#services" class="text-gray-400 hover:text-white transition-colors">Model Fine-Tuning</a></li>
-                        <li><a href="#services" class="text-gray-400 hover:text-white transition-colors">Prompt Engineering</a></li>
+                    <h4 class="text-xl font-semibold mb-6 text-white">Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#services" class="text-gray-400 hover:text-accent-color transition-colors block">Custom AI Chatbots</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-accent-color transition-colors block">RAG Implementation</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-accent-color transition-colors block">Model Fine-Tuning</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-accent-color transition-colors block">Prompt Engineering</a></li>
                     </ul>
                 </div>
                 
                 <div>
-                    <h4 class="text-lg font-semibold mb-4">Contact</h4>
-                    <ul class="space-y-2">
-                        <li class="text-gray-400">Surat, Gujarat, India</li>
-                        <li class="text-gray-400">+91 8460108506</li>
-                        <li class="text-gray-400">llmgotxperts@gmail.com</li>
+                    <h4 class="text-xl font-semibold mb-6 text-white">Contact</h4>
+                    <ul class="space-y-3">
+                        <li class="text-gray-400 flex items-start">
+                            <i class="fas fa-map-marker-alt text-accent-color mr-3 mt-1"></i>
+                            <span>Surat, Gujarat, India</span>
+                        </li>
+                        <li class="text-gray-400 flex items-start">
+                            <i class="fas fa-phone text-accent-color mr-3 mt-1"></i>
+                            <span>+91 8460108506</span>
+                        </li>
+                        <li class="text-gray-400 flex items-start">
+                            <i class="fas fa-envelope text-accent-color mr-3 mt-1"></i>
+                            <span>llmgotxperts@gmail.com</span>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -452,47 +472,15 @@
             <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
                 <p class="text-gray-400">© 2025 LLMXperts. All rights reserved.</p>
                 <div class="mt-4 md:mt-0">
-                    <ul class="flex space-x-6">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Terms of Service</a></li>
+                    <ul class="flex space-x-8">
+                        <li><a href="#" class="text-gray-400 hover:text-accent-color transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-accent-color transition-colors">Terms of Service</a></li>
                     </ul>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- Chat Widget -->
-    <div id="chat-widget" class="fixed bottom-6 right-6 z-50">
-        <button id="chat-toggle" class="bg-indigo-600 text-white p-4 rounded-full shadow-lg hover:bg-indigo-700 transition-colors">
-            <i class="fas fa-comment-dots text-xl"></i>
-        </button>
-        
-        <div id="chat-container" class="hidden bg-white rounded-lg shadow-xl overflow-hidden" style="width: 300px; height: 400px;">
-            <div class="bg-indigo-600 text-white p-4 flex justify-between items-center">
-                <h3 class="font-bold">Chat with us</h3>
-                <button id="chat-close" class="text-white">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-            
-            <div id="chat-messages" class="p-4 h-64 overflow-y-auto">
-                <div class="bot-message bg-gray-100 p-3 rounded-lg mb-2 max-w-xs">
-                    <p>Hi there! How can we help you today?</p>
-                </div>
-            </div>
-            
-            <div class="p-4 border-t">
-                <div class="flex">
-                    <input type="text" id="chat-input" placeholder="Type your message..." class="flex-grow p-2 border rounded-l-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                    <button id="chat-send" class="bg-indigo-600 text-white px-4 rounded-r-lg hover:bg-indigo-700 transition-colors">
-                        <i class="fas fa-paper-plane"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- JavaScript -->
     <script src="js/main.js"></script>
 </body>
 </html>
