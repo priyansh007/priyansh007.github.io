@@ -4,84 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LLMXperts - End-to-End LLM Solutions</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        :root {
-            --primary-color: #4F46E5;
-            --secondary-color: #1E40AF;
-            --accent-color: #818CF8;
-            --text-color: #1F2937;
-            --light-bg: #F9FAFB;
-        }
-        
-        body {
-            font-family: 'Inter', sans-serif;
-            color: var(--text-color);
-        }
-        
-        .hero-section {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            min-height: 60vh;
-            display: flex;
-            align-items: center;
-        }
-        
-        .btn-primary {
-            background-color: var(--primary-color);
-            transition: all 0.3s ease;
-        }
-        
-        .btn-primary:hover {
-            background-color: var(--secondary-color);
-        }
-        
-        .card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        }
-        
-        .section {
-            padding: 5rem 0;
-        }
-        
-        .feature-icon {
-            background-color: var(--accent-color);
-            width: 3rem;
-            height: 3rem;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1rem;
-        }
-        
-        .testimonial {
-            background-color: var(--light-bg);
-            border-radius: 0.5rem;
-            padding: 2rem;
-            margin: 1rem 0;
-        }
-        
-        #contact-form input, #contact-form textarea {
-            width: 100%;
-            padding: 0.75rem;
-            margin-bottom: 1rem;
-            border: 1px solid #e5e7eb;
-            border-radius: 0.375rem;
-        }
-    </style>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="images/favicon.ico">
 </head>
 <body>
     <!-- Header/Navigation -->
     <header class="bg-white shadow-sm">
         <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
             <div class="flex items-center">
-                <div class="text-2xl font-bold text-indigo-600">LLMXperts</div>
+                <a href="#home" class="logo-container">
+                    <img src="images/logo.svg" alt="LLMXperts Logo" class="h-10">
+                </a>
             </div>
             <div class="hidden md:flex space-x-8">
                 <a href="#home" class="text-gray-700 hover:text-indigo-600">Home</a>
@@ -116,7 +51,7 @@
                     </div>
                 </div>
                 <div class="flex justify-center">
-                    <img src="/api/placeholder/600/400" alt="AI Chatbot Illustration" class="rounded-lg shadow-xl">
+                    <img src="images/hero-image.jpg" alt="AI Chatbot Illustration" class="rounded-lg shadow-xl">
                 </div>
             </div>
         </div>
@@ -291,27 +226,27 @@
             
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center">
                 <div class="tech-logo p-4">
-                    <img src="/api/placeholder/120/60" alt="OpenAI Logo" class="h-12">
+                    <img src="images/tech/openai.png" alt="OpenAI Logo" class="h-12">
                     <p class="text-center mt-2 font-medium">OpenAI</p>
                 </div>
                 <div class="tech-logo p-4">
-                    <img src="/api/placeholder/120/60" alt="Python Logo" class="h-12">
+                    <img src="images/tech/python.png" alt="Python Logo" class="h-12">
                     <p class="text-center mt-2 font-medium">Python</p>
                 </div>
                 <div class="tech-logo p-4">
-                    <img src="/api/placeholder/120/60" alt="HuggingFace Logo" class="h-12">
+                    <img src="images/tech/huggingface.png" alt="HuggingFace Logo" class="h-12">
                     <p class="text-center mt-2 font-medium">HuggingFace</p>
                 </div>
                 <div class="tech-logo p-4">
-                    <img src="/api/placeholder/120/60" alt="GCP Logo" class="h-12">
+                    <img src="images/tech/gcp.png" alt="GCP Logo" class="h-12">
                     <p class="text-center mt-2 font-medium">GCP</p>
                 </div>
                 <div class="tech-logo p-4">
-                    <img src="/api/placeholder/120/60" alt="AWS Logo" class="h-12">
+                    <img src="images/tech/aws.png" alt="AWS Logo" class="h-12">
                     <p class="text-center mt-2 font-medium">AWS</p>
                 </div>
                 <div class="tech-logo p-4">
-                    <img src="/api/placeholder/120/60" alt="Pinecone Logo" class="h-12">
+                    <img src="images/tech/pinecone.png" alt="Pinecone Logo" class="h-12">
                     <p class="text-center mt-2 font-medium">Pinecone</p>
                 </div>
             </div>
@@ -353,7 +288,7 @@
                     </ul>
                 </div>
                 <div class="flex justify-center">
-                    <img src="/api/placeholder/500/600" alt="Team Working" class="rounded-lg shadow-xl">
+                    <img src="images/about-image.jpg" alt="Team Working" class="rounded-lg shadow-xl">
                 </div>
             </div>
         </div>
@@ -369,15 +304,15 @@
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center justify-items-center">
                 <a href="https://creditready.com" target="_blank" class="partner-logo p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                    <img src="/api/placeholder/240/120" alt="CreditReady Logo" class="h-16 mx-auto">
+                    <img src="images/partners/creditready.png" alt="CreditReady Logo" class="h-16 mx-auto">
                     <p class="text-center mt-4 font-medium text-lg">creditready.com</p>
                 </a>
                 <a href="https://trutopia.com" target="_blank" class="partner-logo p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                    <img src="/api/placeholder/240/120" alt="Trutopia Logo" class="h-16 mx-auto">
+                    <img src="images/partners/trutopia.png" alt="Trutopia Logo" class="h-16 mx-auto">
                     <p class="text-center mt-4 font-medium text-lg">trutopia.com</p>
                 </a>
                 <a href="https://www.kinexa.agency" target="_blank" class="partner-logo p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                    <img src="/api/placeholder/240/120" alt="Kinexa Agency Logo" class="h-16 mx-auto">
+                    <img src="images/partners/kinexa.png" alt="Kinexa Agency Logo" class="h-16 mx-auto">
                     <p class="text-center mt-4 font-medium text-lg">kinexa.agency</p>
                 </a>
             </div>
@@ -451,22 +386,22 @@
                         <h3 class="text-2xl font-bold mb-6">Send Us a Message</h3>
                         <div class="mb-4">
                             <label for="name" class="block text-gray-700 font-medium mb-2">Name</label>
-                            <input type="text" id="name" placeholder="Your Name" required>
+                            <input type="text" id="name" placeholder="Your Name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
                         </div>
                         
                         <div class="mb-4">
                             <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
-                            <input type="email" id="email" placeholder="Your Email" required>
+                            <input type="email" id="email" placeholder="Your Email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
                         </div>
                         
                         <div class="mb-4">
                             <label for="subject" class="block text-gray-700 font-medium mb-2">Subject</label>
-                            <input type="text" id="subject" placeholder="Subject">
+                            <input type="text" id="subject" placeholder="Subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
                         </div>
                         
                         <div class="mb-6">
                             <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
-                            <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+                            <textarea id="message" rows="5" placeholder="Your Message" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
                         </div>
                         
                         <button type="submit" class="btn-primary text-white font-semibold px-6 py-3 rounded-lg w-full">
@@ -490,4 +425,77 @@
                 <div>
                     <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
                     <ul class="space-y-2">
-                        <li><a href="#home" class="text-gray-400 hover:text-white transition-colors">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition-colors">Services</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition-colors">Custom AI Chatbots</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition-colors">RAG Implementation</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition-colors">Model Fine-Tuning</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition-colors">Prompt Engineering</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2">
+                        <li class="text-gray-400">Surat, Gujarat, India</li>
+                        <li class="text-gray-400">+91 8460108506</li>
+                        <li class="text-gray-400">llmgotxperts@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400">© 2025 LLMXperts. All rights reserved.</p>
+                <div class="mt-4 md:mt-0">
+                    <ul class="flex space-x-6">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chat Widget -->
+    <div id="chat-widget" class="fixed bottom-6 right-6 z-50">
+        <button id="chat-toggle" class="bg-indigo-600 text-white p-4 rounded-full shadow-lg hover:bg-indigo-700 transition-colors">
+            <i class="fas fa-comment-dots text-xl"></i>
+        </button>
+        
+        <div id="chat-container" class="hidden bg-white rounded-lg shadow-xl overflow-hidden" style="width: 300px; height: 400px;">
+            <div class="bg-indigo-600 text-white p-4 flex justify-between items-center">
+                <h3 class="font-bold">Chat with us</h3>
+                <button id="chat-close" class="text-white">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div id="chat-messages" class="p-4 h-64 overflow-y-auto">
+                <div class="bot-message bg-gray-100 p-3 rounded-lg mb-2 max-w-xs">
+                    <p>Hi there! How can we help you today?</p>
+                </div>
+            </div>
+            
+            <div class="p-4 border-t">
+                <div class="flex">
+                    <input type="text" id="chat-input" placeholder="Type your message..." class="flex-grow p-2 border rounded-l-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    <button id="chat-send" class="bg-indigo-600 text-white px-4 rounded-r-lg hover:bg-indigo-700 transition-colors">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
