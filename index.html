@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LLMXperts - End-to-End LLM Solutions</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #4F46E5;
+            --secondary-color: #1E40AF;
+            --accent-color: #818CF8;
+            --text-color: #1F2937;
+            --light-bg: #F9FAFB;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-color);
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--secondary-color);
+        }
+        
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .section {
+            padding: 5rem 0;
+        }
+        
+        .feature-icon {
+            background-color: var(--accent-color);
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+        
+        .testimonial {
+            background-color: var(--light-bg);
+            border-radius: 0.5rem;
+            padding: 2rem;
+            margin: 1rem 0;
+        }
+        
+        #contact-form input, #contact-form textarea {
+            width: 100%;
+            padding: 0.75rem;
+            margin-bottom: 1rem;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.375rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-sm">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="text-2xl font-bold text-indigo-600">LLMXperts</div>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="text-gray-700 hover:text-indigo-600">Home</a>
+                <a href="#services" class="text-gray-700 hover:text-indigo-600">Services</a>
+                <a href="#about" class="text-gray-700 hover:text-indigo-600">About Us</a>
+                <a href="#contact" class="text-gray-700 hover:text-indigo-600">Contact</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-700">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden px-4 py-2 bg-white shadow-md">
+            <a href="#home" class="block py-2 text-gray-700 hover:text-indigo-600">Home</a>
+            <a href="#services" class="block py-2 text-gray-700 hover:text-indigo-600">Services</a>
+            <a href="#about" class="block py-2 text-gray-700 hover:text-indigo-600">About Us</a>
+            <a href="#contact" class="block py-2 text-gray-700 hover:text-indigo-600">Contact</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section text-white">
+        <div class="container mx-auto px-4 py-16">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4">Custom AI Chatbots for Your Business</h1>
+                    <p class="text-xl mb-8">We create intelligent, domain-specific AI chatbots tailored to your company's needs using the latest LLM technologies.</p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="#services" class="btn-primary text-white font-semibold px-6 py-3 rounded-lg text-center">Our Services</a>
+                        <a href="#contact" class="bg-white text-indigo-600 font-semibold px-6 py-3 rounded-lg text-center">Contact Us</a>
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                    <img src="/api/placeholder/600/400" alt="AI Chatbot Illustration" class="rounded-lg shadow-xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Our Services</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">We leverage cutting-edge technologies to create custom AI solutions for your business needs.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="card bg-white p-6 rounded-xl shadow-md">
+                    <div class="feature-icon text-white">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Custom AI Chatbots</h3>
+                    <p class="text-gray-600 mb-4">We build company-specific AI chatbots tailored to your domain knowledge and customer needs.</p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Domain-specific knowledge
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Personalized responses
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            24/7 customer support
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="card bg-white p-6 rounded-xl shadow-md">
+                    <div class="feature-icon text-white">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">RAG Implementation</h3>
+                    <p class="text-gray-600 mb-4">We implement Retrieval Augmented Generation to ground AI responses in your company's data.</p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Data integration
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Accurate responses
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Reduced hallucinations
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="card bg-white p-6 rounded-xl shadow-md">
+                    <div class="feature-icon text-white">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Model Fine-Tuning</h3>
+                    <p class="text-gray-600 mb-4">We fine-tune LLMs on your specific data to improve performance for your use cases.</p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Custom training
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Enhanced performance
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Domain adaptation
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 mt-8">
+                <!-- Service 4 -->
+                <div class="card bg-white p-6 rounded-xl shadow-md">
+                    <div class="feature-icon text-white">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Prompt Engineering</h3>
+                    <p class="text-gray-600 mb-4">We optimize prompts to get the best results from LLMs for your specific use cases.</p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Custom prompt design
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Output optimization
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Response consistency
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="card bg-white p-6 rounded-xl shadow-md">
+                    <div class="feature-icon text-white">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Infrastructure Setup</h3>
+                    <p class="text-gray-600 mb-4">We set up and optimize your AI infrastructure on GCP, AWS, or other platforms.</p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Cloud deployment
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Scaling solutions
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Cost optimization
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies Section -->
+    <section class="section bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Technologies We Use</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">We leverage the latest AI and cloud technologies to build powerful, scalable solutions.</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center">
+                <div class="tech-logo p-4">
+                    <img src="/api/placeholder/120/60" alt="OpenAI Logo" class="h-12">
+                    <p class="text-center mt-2 font-medium">OpenAI</p>
+                </div>
+                <div class="tech-logo p-4">
+                    <img src="/api/placeholder/120/60" alt="Python Logo" class="h-12">
+                    <p class="text-center mt-2 font-medium">Python</p>
+                </div>
+                <div class="tech-logo p-4">
+                    <img src="/api/placeholder/120/60" alt="HuggingFace Logo" class="h-12">
+                    <p class="text-center mt-2 font-medium">HuggingFace</p>
+                </div>
+                <div class="tech-logo p-4">
+                    <img src="/api/placeholder/120/60" alt="GCP Logo" class="h-12">
+                    <p class="text-center mt-2 font-medium">GCP</p>
+                </div>
+                <div class="tech-logo p-4">
+                    <img src="/api/placeholder/120/60" alt="AWS Logo" class="h-12">
+                    <p class="text-center mt-2 font-medium">AWS</p>
+                </div>
+                <div class="tech-logo p-4">
+                    <img src="/api/placeholder/120/60" alt="Pinecone Logo" class="h-12">
+                    <p class="text-center mt-2 font-medium">Pinecone</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold mb-6">About LLMXperts</h2>
+                    <p class="text-lg text-gray-600 mb-6">LLMXperts is a leading provider of end-to-end LLM solutions, specializing in creating company-specific AI chatbots. Based in Surat, India, our team of experts has successfully served over 1000 customers in the finance domain.</p>
+                    <p class="text-lg text-gray-600 mb-6">Founded by Rasila Zalavadiya, we work in partnership with creditready.com, trutopia.com, and kinexa.agency to deliver comprehensive AI solutions that transform businesses.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Our Mission</h3>
+                    <p class="text-lg text-gray-600 mb-6">To democratize access to advanced AI technologies by providing customized, reliable, and efficient LLM solutions that empower businesses to enhance customer experiences and streamline operations.</p>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Our Goals</h3>
+                    <ul class="text-lg text-gray-600 space-y-2">
+                        <li class="flex items-start">
+                            <svg class="h-6 w-6 text-indigo-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Deliver innovative AI solutions that solve real business problems
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-6 w-6 text-indigo-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Ensure high accuracy and reliability in all our AI implementations
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-6 w-6 text-indigo-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Stay at the forefront of LLM technology advances
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex justify-center">
+                    <img src="/api/placeholder/500/600" alt="Team Working" class="rounded-lg shadow-xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="section bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Our Partners</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">We collaborate with these amazing companies to deliver comprehensive AI solutions.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center justify-items-center">
+                <a href="https://creditready.com" target="_blank" class="partner-logo p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    <img src="/api/placeholder/240/120" alt="CreditReady Logo" class="h-16 mx-auto">
+                    <p class="text-center mt-4 font-medium text-lg">creditready.com</p>
+                </a>
+                <a href="https://trutopia.com" target="_blank" class="partner-logo p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    <img src="/api/placeholder/240/120" alt="Trutopia Logo" class="h-16 mx-auto">
+                    <p class="text-center mt-4 font-medium text-lg">trutopia.com</p>
+                </a>
+                <a href="https://www.kinexa.agency" target="_blank" class="partner-logo p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    <img src="/api/placeholder/240/120" alt="Kinexa Agency Logo" class="h-16 mx-auto">
+                    <p class="text-center mt-4 font-medium text-lg">kinexa.agency</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Contact Us</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Reach out to discuss how we can help with your AI chatbot needs.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">Get In Touch</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="text-indigo-600 mr-4">
+                                <i class="fas fa-map-marker-alt text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg">Address</h4>
+                                <p class="text-gray-600">Surat, Gujarat, India</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="text-indigo-600 mr-4">
+                                <i class="fas fa-phone text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg">Phone</h4>
+                                <p class="text-gray-600">+91 8460108506</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="text-indigo-600 mr-4">
+                                <i class="fas fa-envelope text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg">Email</h4>
+                                <p class="text-gray-600">llmgotxperts@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h3 class="text-2xl font-bold mb-6">Follow Us</h3>
+                        <div class="flex space-x-4">
+                            <a href="#" class="bg-indigo-600 text-white p-3 rounded-full hover:bg-indigo-700 transition-colors">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="bg-indigo-600 text-white p-3 rounded-full hover:bg-indigo-700 transition-colors">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="bg-indigo-600 text-white p-3 rounded-full hover:bg-indigo-700 transition-colors">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="bg-indigo-600 text-white p-3 rounded-full hover:bg-indigo-700 transition-colors">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <form id="contact-form" class="bg-gray-50 p-8 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-bold mb-6">Send Us a Message</h3>
+                        <div class="mb-4">
+                            <label for="name" class="block text-gray-700 font-medium mb-2">Name</label>
+                            <input type="text" id="name" placeholder="Your Name" required>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+                            <input type="email" id="email" placeholder="Your Email" required>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="subject" class="block text-gray-700 font-medium mb-2">Subject</label>
+                            <input type="text" id="subject" placeholder="Subject">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+                            <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary text-white font-semibold px-6 py-3 rounded-lg w-full">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">LLMXperts</h3>
+                    <p class="text-gray-400 mb-4">End-to-end LLM solutions for your business needs. We specialize in creating company-specific AI chatbots.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition-colors">
