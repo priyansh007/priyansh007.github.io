@@ -29,6 +29,8 @@ body {
 
 .card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .card:hover {
@@ -51,33 +53,26 @@ body {
     margin-bottom: 1rem;
 }
 
-.testimonial {
-    background-color: var(--light-bg);
-    border-radius: 0.5rem;
-    padding: 2rem;
-    margin: 1rem 0;
-}
-
-/* Logo styling */
-.logo-container {
-    display: inline-block;
-}
-
-.logo-container img {
-    max-height: 40px;
+.logo-container svg {
+    height: 40px;
     width: auto;
 }
 
-/* Responsive styling for mobile */
-@media (max-width: 768px) {
-    .hero-section {
-        min-height: auto;
-        padding: 3rem 0;
-    }
-    
-    .section {
-        padding: 3rem 0;
-    }
+/* Tech and Partner logos */
+.tech-logo img, .partner-logo img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.tech-logo, .partner-logo {
+    transition: all 0.3s ease;
+    opacity: 0.9;
+}
+
+.tech-logo:hover, .partner-logo:hover {
+    opacity: 1;
+    transform: translateY(-5px);
 }
 
 /* Chat widget styling */
@@ -99,21 +94,52 @@ body {
     background-color: #F3F4F6;
 }
 
-/* Partner logo styling */
-.partner-logo {
-    transition: all 0.3s ease;
+/* Responsive styling */
+@media (max-width: 768px) {
+    .hero-section {
+        min-height: auto;
+        padding: 3rem 0;
+    }
+    
+    .section {
+        padding: 3rem 0;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.75rem;
+    }
+    
+    #chat-container {
+        width: 90vw !important;
+        right: 5vw;
+        left: 5vw;
+        bottom: 80px;
+    }
 }
 
-.partner-logo:hover {
-    transform: translateY(-5px);
+/* Form styling */
+input:focus, textarea:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+    border-color: var(--primary-color);
 }
 
-/* Tech logo styling */
-.tech-logo {
-    transition: all 0.3s ease;
-    opacity: 0.8;
+/* Animation for page load */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-.tech-logo:hover {
-    opacity: 1;
+.animate-fadeInUp {
+    animation: fadeInUp 0.5s ease forwards;
 }
