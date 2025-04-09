@@ -1,0 +1,44 @@
+<svg viewBox="0 0 300 80" xmlns="http://www.w3.org/2000/svg" class="h-10">
+                        <defs>
+                            <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" stop-color="
+#4F46E5" />
+                                <stop offset="100%" stop-color="
+#1E40AF" />
+                            </linearGradient>
+                        </defs>
+  <defs>
+    <linearGradient id="logoGradient2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2741B9" />
+      <stop offset="100%" stop-color="#818CF8" />
+    </linearGradient>
+  </defs>
+                        <text x="15" y="50" font-family="Arial, sans-serif" font-size="38" font-weight="bold" fill="url(#logoGradient)">LLM<tspan fill="
+#818CF8">X</tspan></text>
+   <text x="117" y="50" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="url(#logoGradient)">perts</text>
+
+<g id="brainPattern"  transform="translate(-122, 6)">
+ <path d="M250,25 C260,15 270,15 280,25" stroke="#2741B9" stroke-width="1.5" fill="none"/>
+  <circle cx="250" cy="25" r="2.5" fill="#2741B9" />
+  <circle cx="265" cy="18" r="2.5" fill="#2741B9" />
+  <circle cx="280" cy="25" r="2.5" fill="#2741B9" />
+</g>
+
+  <!-- <g id="brainPattern"  transform="translate(-75, -2)">
+  <path d="M250,25 C260,15 270,15 280,25" stroke="#818CF8" stroke-width="1.5" fill="none"/>
+  <path d="M250,40 C260,30 270,30 280,40" stroke="#818CF8" stroke-width="1.5" fill="none"/>
+  <path d="M250,55 C260,45 270,45 280,55" stroke="#818CF8" stroke-width="1.5" fill="none"/>
+
+  <circle cx="250" cy="25" r="2.5" fill="#818CF8" />
+  <circle cx="280" cy="25" r="2.5" fill="#818CF8" />
+  <circle cx="250" cy="40" r="2.5" fill="#818CF8" />
+  <circle cx="280" cy="40" r="2.5" fill="#818CF8" />
+  <circle cx="250" cy="55" r="2.5" fill="#818CF8" />
+  <circle cx="280" cy="55" r="2.5" fill="#818CF8" />
+
+  <circle cx="265" cy="18" r="2.5" fill="#818CF8" />
+  <circle cx="265" cy="33" r="2.5" fill="#818CF8" />
+  <circle cx="265" cy="48" r="2.5" fill="#818CF8" />
+</g> -->
+                        
+                    </svg>

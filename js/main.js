@@ -69,7 +69,7 @@ chatSend.addEventListener('click', () => {
         addMessage(message, true);
         chatInput.value = '';
         
-        // Simple bot response (this would be replaced with actual chatbot functionality)
+        // Simple bot response
         setTimeout(() => {
             addMessage('Thanks for your message! One of our team members will get back to you soon.');
         }, 1000);
@@ -90,39 +90,26 @@ contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
     
     // Here you would typically send the form data to your server
-    // This is just a placeholder functionality
+    // For now, we'll just show a success message
+    
     alert('Thank you for your message! We will get back to you soon.');
     contactForm.reset();
 });
 
-// Add animation for services cards
-const animateOnScroll = () => {
-    const cards = document.querySelectorAll('.card');
+// Add animation to elements when they come into view
+document.addEventListener('DOMContentLoaded', function() {
+    const animateElements = document.querySelectorAll('.card, .feature-icon, .tech-logo, .partner-logo');
     
-    cards.forEach(card => {
-        const cardPosition = card.getBoundingClientRect().top;
-        const screenPosition = window.innerHeight / 1.3;
-        
-        if(cardPosition < screenPosition) {
-            card.style.opacity = '1';
-            card.style.transform = 'translateY(0)';
-        }
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate-fade-in');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+    
+    animateElements.forEach(el => {
+        observer.observe(el);
     });
-};
-
-// Set initial state for animations
-document.addEventListener('DOMContentLoaded', () => {
-    const cards = document.querySelectorAll('.card');
-    
-    cards.forEach(card => {
-        card.style.opacity = '0';
-        card.style.transform = 'translateY(20px)';
-        card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-    });
-    
-    // Trigger animation on initial load
-    setTimeout(animateOnScroll, 300);
-    
-    // Add scroll event listener for animations
-    window.addEventListener('scroll', animateOnScroll);
 });
