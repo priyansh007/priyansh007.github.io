@@ -1,0 +1,61 @@
+<svg viewBox="0 0 300 80" xmlns="http://www.w3.org/2000/svg" width="300" height="80" shape-rendering="geometricPrecision">
+  <!-- Add viewport metadata -->
+  <metadata>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description>
+        <viewport content="width=device-width, initial-scale=1.0"/>
+      </rdf:Description>
+    </rdf:RDF>
+  </metadata>
+  
+  <defs>
+    <!-- Enhanced primary gradient with more vibrant colors -->
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6366F1" />
+      <stop offset="100%" stop-color="#4338CA" />
+    </linearGradient>
+    
+    <!-- Enhanced secondary gradient -->
+    <linearGradient id="logoGradient2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4F46E5" />
+      <stop offset="100%" stop-color="#A5B4FC" />
+    </linearGradient>
+          
+    <!-- Neural network pattern gradient -->
+    <linearGradient id="neuralGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366F1" />
+      <stop offset="100%" stop-color="#A5B4FC" />
+    </linearGradient>
+    
+    <!-- Add a subtle glow filter -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  <text x="131" y="50" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="url(#logoGradient2)" text-rendering="optimizeLegibility">perts</text>
+  
+  <!-- Main Logo Text converted to paths to prevent blur -->
+  <g>
+    <!-- L -->
+    <path d="M18.29 50V22.28H25.39V43.84H37.25V50H18.29Z" fill="url(#logoGradient)" />
+    <!-- L -->
+    <path d="M41.48 50V22.28H48.58V43.84H60.44V50H41.48Z" fill="url(#logoGradient)" />
+    <!-- M -->
+    <path d="M64.67 50V22.28H72.73L80.41 38.26L88.09 22.28H96.15V50H89.05V32.54L82.25 46.74H78.57L71.77 32.54V50H64.67Z" fill="url(#logoGradient)" />
+    <!-- X -->
+    <path d="M100.08 50L111.17 36.1L100.54 22.28H109.1L115.23 30.62L121.29 22.28H129.85L119.22 36.1L130.31 50H121.75L115.23 41.14L108.64 50H100.08Z" fill="#A5B4FC" />
+    
+  </g>
+  
+  
+  
+  <!-- Enhanced Neural Network Pattern with crisp edges -->
+  <g id="neuralNetwork" shape-rendering="crispEdges">
+    <!-- Primary Network -->
+    <path d="M255,30 C265,20 275,20 285,30" stroke="url(#neuralGradient)" stroke-width="2" fill="none" transform="translate(-115, 1)" />
+    <circle cx="140" cy="30" r="2.5" fill="#6366F1" />
+    <circle cx="154" cy="23" r="2.5" fill="#A5B4FC"  />
+    <circle cx="170" cy="30" r="2.5" fill="#6366F1" />
+  </g>
+</svg>
