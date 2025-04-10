@@ -1,0 +1,53 @@
+<svg viewBox="0 0 300 80" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Enhanced primary gradient with more vibrant colors -->
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="
+#6366F1" />
+      <stop offset="100%" stop-color="
+#4338CA" />
+    </linearGradient>
+
+    <!-- Enhanced secondary gradient -->
+    <linearGradient id="logoGradient2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="
+#4F46E5" />
+      <stop offset="100%" stop-color="
+#A5B4FC" />
+    </linearGradient>
+
+    
+
+    <!-- Neural network pattern gradient -->
+    <linearGradient id="neuralGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="
+#6366F1" />
+      <stop offset="100%" stop-color="
+#A5B4FC" />
+    </linearGradient>
+  </defs>
+
+  <!-- Main Logo Text -->
+  <text x="15" y="50" font-family="Arial, sans-serif" font-size="38" font-weight="bold" fill="url(#logoGradient)">
+    LLM<tspan fill="
+#A5B4FC">X</tspan>
+  </text>
+
+  <!-- Secondary Text -->
+  <text x="117" y="50" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="url(#logoGradient2)">
+    perts
+  </text>
+
+  <!-- Enhanced Neural Network Pattern -->
+  <g id="neuralNetwork">
+    <!-- Primary Network -->
+    <path d="M250,25 C260,15 270,15 280,25" stroke="url(#neuralGradient)" stroke-width="1.5" fill="none" transform="translate(-122, 6)" />
+    <circle cx="128" cy="31" r="2.5" fill="
+#6366F1" filter="url(#glow)" />
+    <circle cx="143" cy="24" r="2.5" fill="
+#A5B4FC" filter="url(#glow)" />
+    <circle cx="158" cy="31" r="2.5" fill="
+#6366F1" filter="url(#glow)" />
+
+  </g>
+</svg>
